@@ -94,6 +94,10 @@ h2 { font-size: 1.25rem; margin: 36px 0 6px; }
 .b-warn { background: var(--warn-soft); color: var(--warn); }
 .b-dev { background: var(--dev-soft); color: var(--dev); }
 
+.note {
+  font-size: .92rem; color: var(--warn); background: var(--warn-soft);
+  border-radius: 8px; padding: 8px 10px;
+}
 details { border-top: 1px solid var(--line); padding-top: 8px; }
 summary { cursor: pointer; font-weight: 600; padding: 4px 0; }
 details ol, details ul { margin: 6px 0 4px; padding-left: 1.3em; }
@@ -315,7 +319,7 @@ footer { padding: 28px 0 40px; color: var(--muted); font-size: .9rem; }
       <div class="emoji" aria-hidden="true">📷</div>
       <div><h3>Partie z fotky partiáře</h3><div class="who">pro hráče a rozhodčí</div></div>
     </div>
-    <div class="badges"><span class="badge b-ok">Webová aplikace</span><span class="badge b-dev">Pokus</span></div>
+    <div class="badges"><span class="badge b-dev">Připravuje se</span></div>
     <p>Vyfotíš ručně psaný partiář a umělá inteligence (Claude) z něj přečte tahy. Každý tah se
       ověří podle pravidel šachu, nejistá místa se ukážou ke kontrole a výsledkem je partie v PGN.
       Zvládne českou i cizí notaci.</p>
@@ -330,10 +334,11 @@ footer { padding: 28px 0 40px; color: var(--muted); font-size: .9rem; }
       </ol>
       <p>Pozor: čtení je placené z tvého klíče, jeden partiář obvykle stojí 0,10 až 0,30 USD.</p>
     </details>
+    <p class="note">Jde spíš o pokus. Ručně psané partiáře se čtou velmi špatně, takže je dost možné,
+      že aplikace nikdy nebude spolehlivě fungovat.</p>
     <div class="actions">
-      <a class="btn btn-main" href="https://slivam24.github.io/Photo-to-PGN/">Otevřít</a>
-      <a class="btn btn-sec" href="https://github.com/slivam24/Photo-to-PGN#readme">Podrobný návod</a>
-      <a class="btn btn-sec" href="https://github.com/slivam24/Photo-to-PGN/issues">Nahlásit chybu</a>
+      <a class="btn btn-main" aria-disabled="true" tabindex="-1">Brzy</a>
+      <a class="btn btn-sec" href="https://github.com/slivam24/Photo-to-PGN">Zdrojový kód</a>
     </div>
   </article>
 
