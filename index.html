@@ -53,78 +53,68 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 a { color: var(--accent); }
-.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
 
-header { padding: 48px 0 24px; }
-header h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.15; margin: 0 0 12px; }
+header { padding: 28px 0 14px; }
+header h1 { font-size: clamp(1.5rem, 4vw, 2rem); line-height: 1.2; margin: 0 0 4px; }
 header h1 span { color: var(--accent); }
-header p { max-width: 640px; margin: 0; color: var(--muted); font-size: 1.08rem; }
+header p { margin: 0; color: var(--muted); }
 
 .banner {
-  display: flex; gap: 14px; align-items: flex-start;
   background: var(--banner); border: 1px solid var(--banner-line);
-  border-radius: 12px; padding: 16px 18px; margin: 8px 0 32px;
+  border-radius: 10px; padding: 9px 14px; margin: 0 0 18px; font-size: .93rem;
 }
-.banner .ico { font-size: 1.6rem; line-height: 1; }
-.banner strong { display: block; margin-bottom: 4px; }
-.banner p { margin: 0; }
 
-h2 { font-size: 1.25rem; margin: 36px 0 6px; }
-.section-note { margin: 0 0 16px; color: var(--muted); }
-
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 12px; }
 .card {
-  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
-  padding: 20px; display: flex; flex-direction: column; gap: 10px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 14px 16px; display: flex; flex-direction: column; gap: 8px;
 }
-.card-head { display: flex; align-items: center; gap: 12px; }
+.card-head { display: flex; align-items: center; gap: 10px; }
 .emoji {
-  flex: none; width: 44px; height: 44px; border-radius: 10px;
-  display: grid; place-items: center; font-size: 1.5rem; background: var(--accent-soft);
+  flex: none; width: 36px; height: 36px; border-radius: 9px;
+  display: grid; place-items: center; font-size: 1.2rem; background: var(--accent-soft);
 }
-.card h3 { margin: 0; font-size: 1.12rem; line-height: 1.25; }
-.who { font-size: .85rem; color: var(--muted); }
-.card p { margin: 0; }
-.badges { display: flex; flex-wrap: wrap; gap: 6px; }
-.badge { font-size: .78rem; font-weight: 600; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
-.b-ok { background: var(--ok-soft); color: var(--ok); }
+.card h3 { margin: 0; font-size: 1.02rem; line-height: 1.25; }
+.meta { font-size: .8rem; color: var(--muted); }
+.badge {
+  margin-left: auto; align-self: flex-start; flex: none;
+  font-size: .72rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; white-space: nowrap;
+}
 .b-warn { background: var(--warn-soft); color: var(--warn); }
 .b-dev { background: var(--dev-soft); color: var(--dev); }
-
+.card p { margin: 0; }
 .note {
-  font-size: .92rem; color: var(--warn); background: var(--warn-soft);
-  border-radius: 8px; padding: 8px 10px;
+  font-size: .85rem; color: var(--warn); background: var(--warn-soft);
+  border-radius: 7px; padding: 6px 9px;
 }
-details { border-top: 1px solid var(--line); padding-top: 8px; }
-summary { cursor: pointer; font-weight: 600; padding: 4px 0; }
-details ol, details ul { margin: 6px 0 4px; padding-left: 1.3em; }
-details li { margin: 3px 0; }
+
+details { font-size: .92rem; }
+summary { cursor: pointer; font-weight: 600; color: var(--muted); }
+summary:hover { color: var(--text); }
+details ol { margin: 6px 0 2px; padding-left: 1.3em; }
+details li { margin: 2px 0; }
+details p { margin: 4px 0 0; }
 kbd {
-  font: .85em ui-monospace, SFMono-Regular, Menlo, monospace; padding: 1px 5px;
+  font: .85em ui-monospace, SFMono-Regular, Menlo, monospace; padding: 0 4px;
   border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; background: var(--bg);
 }
 
-.actions { margin-top: auto; padding-top: 6px; display: flex; flex-wrap: wrap; gap: 8px; }
+.actions { margin-top: auto; display: flex; align-items: center; flex-wrap: wrap; gap: 4px 14px; font-size: .88rem; }
 .btn {
-  display: inline-block; text-decoration: none; font-weight: 600; font-size: .95rem;
-  padding: 9px 14px; border-radius: 9px; border: 1px solid var(--btn);
+  display: inline-block; text-decoration: none; font-weight: 600; font-size: .9rem;
+  padding: 6px 14px; border-radius: 8px; background: var(--btn); color: var(--btn-text);
 }
-.btn-main { background: var(--btn); color: var(--btn-text); }
-.btn-sec { color: var(--text); border-color: var(--line); }
-.btn:hover { filter: brightness(1.1); }
-.btn-sec:hover { border-color: var(--muted); }
-.btn[aria-disabled="true"] { opacity: .55; pointer-events: none; }
+.btn:hover { filter: brightness(1.15); }
+.btn[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+.actions a:not(.btn) { color: var(--muted); }
+.actions a:not(.btn):hover { color: var(--accent); }
 
-.feedback {
-  margin: 40px 0 0; padding: 20px; border-radius: 14px;
-  background: var(--card); border: 1px solid var(--line);
-}
-.feedback h2 { margin-top: 0; }
-.feedback p { margin: 0 0 8px; }
-footer { padding: 28px 0 40px; color: var(--muted); font-size: .9rem; }
+footer { padding: 22px 0 32px; color: var(--muted); font-size: .85rem; }
+footer p { margin: 0 0 4px; }
 </style>
 </head>
 <body>
@@ -132,228 +122,169 @@ footer { padding: 28px 0 40px; color: var(--muted); font-size: .9rem; }
 
 <header>
   <h1><span>♞</span> Šachové aplikace</h1>
-  <p>Malé webové aplikace pro šachové turnaje, soutěže družstev a práci s partiemi.
-    Běží v prohlížeči, většinou zdarma a bez instalace. Vyber, co potřebuješ, a klikni na <strong>Otevřít</strong>.</p>
+  <p>Webové aplikace pro turnaje, soutěže družstev a partie. Běží v prohlížeči a jsou zdarma.</p>
 </header>
 
-<div class="banner" role="note">
-  <div class="ico" aria-hidden="true">🚧</div>
-  <div>
-    <strong>Pořád se na tom pracuje</strong>
-    <p>Všechny aplikace jsou ve vývoji a ještě se na nich bude hodně měnit. Něco nemusí fungovat,
-      vzhled i ovládání se mohou změnit a nové funkce průběžně přibývají. Před důležitým turnajem
-      si aplikaci raději vyzkoušej předem. Když narazíš na chybu nebo máš nápad, dej vědět
-      (odkaz <em>Nahlásit chybu</em> je u každé aplikace).</p>
-  </div>
-</div>
+<p class="banner" role="note">🚧 <strong>Pořád se na tom pracuje.</strong> Aplikace se budou ještě hodně měnit
+  a něco nemusí fungovat. Před důležitým turnajem si je raději vyzkoušej předem.</p>
 
-<h2>Turnaje</h2>
-<p class="section-note">Od přihlášek přes losování až po tisk a promítání v sále.</p>
 <div class="grid">
 
   <article class="card">
     <div class="card-head">
       <div class="emoji" aria-hidden="true">📝</div>
-      <div><h3>Přihlášky na turnaje</h3><div class="who">pro pořadatele a hráče</div></div>
+      <div><h3>Přihlášky na turnaje</h3><div class="meta">Turnaje · pro pořadatele a hráče</div></div>
+      <span class="badge b-warn">Ve vývoji</span>
     </div>
-    <div class="badges"><span class="badge b-ok">Webová aplikace</span><span class="badge b-warn">Ve vývoji</span></div>
-    <p>Online přihlašování na šachové akce. Formulář sám doplní údaje hráče z listiny LOK
-      (ročník, klub, ELO, FIDE ID), hlídá věkové podmínky a umí i přihlášky družstev.
-      Pořadatel má administraci s exportem přímo do Swiss-Manageru, platbami a seznamem k prezenci.</p>
+    <p>Online přihlašování s našeptáváním z listiny LOK. Pořadatel má administraci s exportem do Swiss-Manageru.</p>
     <details>
       <summary>Jak na to</summary>
       <ol>
-        <li><strong>Hráč:</strong> otevře přehled akcí, vybere turnaj a začne psát své jméno. Zbytek se doplní sám.</li>
-        <li>Po odeslání přijde potvrzovací e-mail s odkazem, přes který jde přihlášku později změnit nebo zrušit.</li>
-        <li><strong>Pořadatel:</strong> se přihlásí Google účtem do administrace, založí akci a turnaje a rozešle odkaz.</li>
-        <li>Před turnajem stáhne export pro Swiss-Manager a vytiskne seznam k prezenci.</li>
+        <li><strong>Hráč:</strong> vybere turnaj a začne psát své jméno. Ročník, klub a ELO se doplní samy.</li>
+        <li>Přijde mu potvrzovací e-mail s odkazem pro pozdější změnu nebo odhlášení.</li>
+        <li><strong>Pořadatel:</strong> se přihlásí Google účtem do administrace a založí akci a turnaje.</li>
+        <li>Před turnajem stáhne export pro Swiss-Manager a seznam k prezenci.</li>
       </ol>
     </details>
     <div class="actions">
-      <a class="btn btn-main" href="https://slivam24.github.io/Prihlasovaci_formular/">Otevřít</a>
-      <a class="btn btn-sec" href="https://github.com/slivam24/Prihlasovaci_formular#readme">Podrobný návod</a>
-      <a class="btn btn-sec" href="https://github.com/slivam24/Prihlasovaci_formular/issues">Nahlásit chybu</a>
+      <a class="btn" href="https://slivam24.github.io/Prihlasovaci_formular/">Otevřít</a>
+      <a href="https://github.com/slivam24/Prihlasovaci_formular#readme">Návod</a>
+      <a href="https://github.com/slivam24/Prihlasovaci_formular/issues">Nahlásit chybu</a>
     </div>
   </article>
 
   <article class="card">
     <div class="card-head">
       <div class="emoji" aria-hidden="true">🔀</div>
-      <div><h3>Švýcar</h3><div class="who">pro rozhodčí a pořadatele</div></div>
+      <div><h3>Švýcar</h3><div class="meta">Turnaje · pro rozhodčí</div></div>
+      <span class="badge b-dev">Připravuje se</span>
     </div>
-    <div class="badges"><span class="badge b-dev">Připravuje se</span></div>
-    <p>Řízení turnaje jednotlivců švýcarským systémem přímo v prohlížeči: losování podle holandského
-      systému FIDE (pravidla od roku 2026), pomocná hodnocení podle Soutěžního řádu ŠSČR,
-      zadávání výsledků z mobilu, pořadí, tabulka, tisk a export TRF. Funguje i bez internetu.</p>
+    <p>Losování turnaje jednotlivců podle holandského systému FIDE, výsledky z mobilu, pořadí a tisk. Funguje i offline.</p>
     <details>
       <summary>Jak na to</summary>
       <ol>
-        <li>Založ turnaj a zadej hráče. Startovní čísla se seřadí podle ratingu sama.</li>
-        <li>Vylosuj kolo a výsledky zadávej velkými tlačítky 1–0, ½, 0–1.</li>
+        <li>Založ turnaj a zadej hráče.</li>
+        <li>Vylosuj kolo a zadávej výsledky velkými tlačítky 1–0, ½, 0–1.</li>
         <li>Po kole vytiskni pořadí nebo tabulku a pokračuj dalším kolem.</li>
-        <li>Turnaj si průběžně zálohuj do souboru. Data jsou jen v tvém zařízení.</li>
       </ol>
-      <p>Aplikace je zatím rozpracovaná a ještě není zveřejněná. Odkaz přibude, až bude připravená k vyzkoušení.</p>
+      <p>Zatím není zveřejněná, odkaz přibude, až bude připravená k vyzkoušení.</p>
     </details>
     <div class="actions">
-      <a class="btn btn-main" aria-disabled="true" tabindex="-1">Brzy</a>
-      <a class="btn btn-sec" href="https://github.com/slivam24/Easy_svicar">Zdrojový kód</a>
+      <a class="btn" aria-disabled="true" tabindex="-1">Brzy</a>
+      <a href="https://github.com/slivam24/Easy_svicar">Zdrojový kód</a>
     </div>
   </article>
 
   <article class="card">
     <div class="card-head">
       <div class="emoji" aria-hidden="true">🖨️</div>
-      <div><h3>Šachový tisk</h3><div class="who">pro rozhodčí</div></div>
+      <div><h3>Šachový tisk</h3><div class="meta">Turnaje · pro rozhodčí</div></div>
+      <span class="badge b-warn">Ve vývoji</span>
     </div>
-    <div class="badges"><span class="badge b-ok">Webová aplikace</span><span class="badge b-warn">Ve vývoji</span></div>
-    <p>Pohodlný tisk turnaje z chess-results.com: startovní listina, los na nástěnku, abecední
-      přehled „kdo kde hraje“, výsledkové lístky k rozstříhání, pořadí i výstupy pro družstva.
-      Náhled odpovídá tisku na A4.</p>
+    <p>Tisk z chess-results.com: startovní listina, los na nástěnku, výsledkové lístky, pořadí i družstva.</p>
     <details>
       <summary>Jak na to</summary>
       <ol>
-        <li>Vlož odkaz na turnaj na chess-results.com (nebo jeho číslo) a stáhni data.</li>
-        <li>Vyber výstup, třeba los kola nebo výsledkové lístky, a uprav vzhled.</li>
-        <li>Klikni na <strong>Tisknout</strong>.</li>
-        <li>Po dalším kole stačí <strong>Aktualizovat data</strong>. Nastavení si prohlížeč pamatuje.</li>
+        <li>Vlož odkaz na turnaj na chess-results.com a stáhni data.</li>
+        <li>Vyber výstup a klikni na <strong>Tisknout</strong>.</li>
+        <li>Po dalším kole stačí <strong>Aktualizovat data</strong>.</li>
       </ol>
     </details>
     <div class="actions">
-      <a class="btn btn-main" href="https://slivam24.github.io/print-chess-results/">Otevřít</a>
-      <a class="btn btn-sec" href="https://github.com/slivam24/print-chess-results#n%C3%A1vod-k-pou%C5%BEit%C3%AD">Podrobný návod</a>
-      <a class="btn btn-sec" href="https://github.com/slivam24/print-chess-results/issues">Nahlásit chybu</a>
+      <a class="btn" href="https://slivam24.github.io/print-chess-results/">Otevřít</a>
+      <a href="https://github.com/slivam24/print-chess-results#n%C3%A1vod-k-pou%C5%BEit%C3%AD">Návod</a>
+      <a href="https://github.com/slivam24/print-chess-results/issues">Nahlásit chybu</a>
     </div>
   </article>
 
   <article class="card">
     <div class="card-head">
       <div class="emoji" aria-hidden="true">📺</div>
-      <div><h3>Dashboard do hracího sálu</h3><div class="who">pro televizi nebo projektor</div></div>
+      <div><h3>Dashboard do sálu</h3><div class="meta">Turnaje · na televizi nebo projektor</div></div>
+      <span class="badge b-warn">Ve vývoji</span>
     </div>
-    <div class="badges"><span class="badge b-ok">Webová aplikace</span><span class="badge b-warn">Ve vývoji</span></div>
-    <p>Los a pořadí dvou turnajů z chess-results.com vedle sebe na celou obrazovku. Výsledky se
-      každých 30 sekund doplňují samy, písmo se přizpůsobí velikosti obrazovky a dlouhý los
-      se pomalu posouvá.</p>
+    <p>Los a pořadí dvou turnajů z chess-results.com vedle sebe na celou obrazovku, s obnovou každých 30 sekund.</p>
     <details>
       <summary>Jak na to</summary>
       <ol>
-        <li>Otevři stránku na počítači připojeném k televizi.</li>
         <li>Zadej čísla nebo odkazy dvou turnajů z chess-results.com.</li>
         <li>Zvol <strong>Zobrazit na celou obrazovku</strong>.</li>
-        <li>Klávesy: <kbd>L</kbd> los, <kbd>P</kbd> pořadí, <kbd>O</kbd> obojí, <kbd>+</kbd>/<kbd>−</kbd> písmo, <kbd>F</kbd> celá obrazovka.</li>
+        <li>Klávesy: <kbd>L</kbd> los, <kbd>P</kbd> pořadí, <kbd>O</kbd> obojí, <kbd>+</kbd>/<kbd>−</kbd> písmo.</li>
       </ol>
     </details>
     <div class="actions">
-      <a class="btn btn-main" href="https://slivam24.github.io/chess-ressults-dashboard/">Otevřít</a>
-      <a class="btn btn-sec" href="https://github.com/slivam24/chess-ressults-dashboard#readme">Podrobný návod</a>
-      <a class="btn btn-sec" href="https://github.com/slivam24/chess-ressults-dashboard/issues">Nahlásit chybu</a>
+      <a class="btn" href="https://slivam24.github.io/chess-ressults-dashboard/">Otevřít</a>
+      <a href="https://github.com/slivam24/chess-ressults-dashboard#readme">Návod</a>
+      <a href="https://github.com/slivam24/chess-ressults-dashboard/issues">Nahlásit chybu</a>
     </div>
   </article>
-
-</div>
-
-<h2>Soutěže družstev</h2>
-<div class="grid">
 
   <article class="card">
     <div class="card-head">
       <div class="emoji" aria-hidden="true">✍️</div>
-      <div><h3>Zápis o utkání</h3><div class="who">pro rozhodčí a kapitány</div></div>
+      <div><h3>Zápis o utkání</h3><div class="meta">Družstva · pro rozhodčí a kapitány</div></div>
+      <span class="badge b-warn">Ve vývoji</span>
     </div>
-    <div class="badges"><span class="badge b-ok">Webová aplikace</span><span class="badge b-ok">Funguje i offline</span><span class="badge b-warn">Ve vývoji</span></div>
-    <p>Náhrada papírového zápisu o šachovém utkání. Soupisky se načtou ze stránek chess.cz
-      nebo chess-results.com, zápis se vyplní na tabletu či telefonu, podepíše prstem
-      a na konci vznikne PDF a obrázek, který jde rovnou poslat e-mailem.</p>
+    <p>Náhrada papírového zápisu. Soupisky z chess.cz, podpisy prstem na tabletu, na konci PDF k odeslání.</p>
     <details>
       <summary>Jak na to</summary>
       <ol>
-        <li><strong>Zápas:</strong> vyber soutěž, kolo a zápas.</li>
-        <li><strong>Sestavy:</strong> zaškrtni hráče ze soupisky. Aplikace hlídá pravidla o hostech a počtu hráčů.</li>
-        <li><strong>Výsledky:</strong> zadávej průběžně, součet se počítá sám.</li>
-        <li><strong>Podpisy:</strong> rozhodčí a kapitáni se podepíšou prstem (na počítači přes QR kód na telefonu).</li>
-        <li><strong>Výstup:</strong> zkontroluj zápis a ulož nebo pošli PDF.</li>
+        <li>Vyber soutěž, kolo a zápas, pak zaškrtni hráče ze soupisky.</li>
+        <li>Zadávej výsledky, součet se počítá sám.</li>
+        <li>Rozhodčí a kapitáni se podepíšou prstem.</li>
+        <li>Zkontroluj zápis a ulož nebo pošli PDF.</li>
       </ol>
-      <p>Tip: v prohlížeči telefonu jde aplikaci přidat na plochu jako ikonu.</p>
+      <p>Tip: na telefonu jde aplikaci přidat na plochu jako ikonu.</p>
     </details>
     <div class="actions">
-      <a class="btn btn-main" href="https://slivam24.github.io/zapis-o-utkani/">Otevřít</a>
-      <a class="btn btn-sec" href="https://github.com/slivam24/zapis-o-utkani#readme">Podrobný návod</a>
-      <a class="btn btn-sec" href="https://github.com/slivam24/zapis-o-utkani/issues">Nahlásit chybu</a>
+      <a class="btn" href="https://slivam24.github.io/zapis-o-utkani/">Otevřít</a>
+      <a href="https://github.com/slivam24/zapis-o-utkani#readme">Návod</a>
+      <a href="https://github.com/slivam24/zapis-o-utkani/issues">Nahlásit chybu</a>
     </div>
   </article>
-
-</div>
-
-<h2>Partie</h2>
-<div class="grid">
 
   <article class="card">
     <div class="card-head">
       <div class="emoji" aria-hidden="true">♟️</div>
-      <div><h3>PGN editor</h3><div class="who">pro hráče, trenéry a děti</div></div>
+      <div><h3>PGN editor</h3><div class="meta">Partie · aplikace pro Android</div></div>
+      <span class="badge b-warn">Ve vývoji</span>
     </div>
-    <div class="badges"><span class="badge b-ok">Aplikace pro Android</span><span class="badge b-ok">Bez internetu</span><span class="badge b-warn">Ve vývoji</span></div>
-    <p>Zápis a úprava šachových partií ve formátu PGN: varianty, komentáře, česká notace,
-      názvy zahájení. Partii jde uložit nebo poslat e-mailem. Navíc obsahuje výuku a tréninky
-      pro začátečníky (tahy figur, pěšci proti pěšcům, vlci a ovečka).</p>
+    <p>Zápis a úprava partií v PGN, funguje bez internetu. Navíc výuka a tréninky pro začátečníky.</p>
     <details>
       <summary>Jak nainstalovat</summary>
       <ol>
-        <li>V telefonu otevři stránku <strong>Releases</strong> (tlačítko Stáhnout).</li>
-        <li>U nejnovějšího vydání stáhni soubor <code>pgn-editor-X.Y.apk</code>.</li>
+        <li>V telefonu klikni na <strong>Stáhnout</strong> a stáhni soubor <code>pgn-editor-X.Y.apk</code>.</li>
         <li>Otevři ho a povol prohlížeči instalovat aplikace.</li>
-        <li>Pokud se ozve Play Protect, zvol <strong>Přesto nainstalovat</strong>. Hlásí to jen proto, že aplikace zatím není v Obchodu Play.</li>
+        <li>Když se ozve Play Protect, zvol <strong>Přesto nainstalovat</strong>.</li>
       </ol>
-      <p>Novou verzi stačí nainstalovat přes starou, partie i nastavení zůstanou.</p>
+      <p>Novou verzi stačí nainstalovat přes starou, partie zůstanou.</p>
     </details>
     <div class="actions">
-      <a class="btn btn-main" href="https://github.com/slivam24/pgn-editor/releases/latest">Stáhnout</a>
-      <a class="btn btn-sec" href="https://github.com/slivam24/pgn-editor#readme">Podrobný návod</a>
-      <a class="btn btn-sec" href="https://github.com/slivam24/pgn-editor/issues">Nahlásit chybu</a>
+      <a class="btn" href="https://github.com/slivam24/pgn-editor/releases/latest">Stáhnout</a>
+      <a href="https://github.com/slivam24/pgn-editor#readme">Návod</a>
+      <a href="https://github.com/slivam24/pgn-editor/issues">Nahlásit chybu</a>
     </div>
   </article>
 
   <article class="card">
     <div class="card-head">
       <div class="emoji" aria-hidden="true">📷</div>
-      <div><h3>Partie z fotky partiáře</h3><div class="who">pro hráče a rozhodčí</div></div>
+      <div><h3>Partie z fotky partiáře</h3><div class="meta">Partie · pro hráče a rozhodčí</div></div>
+      <span class="badge b-dev">Připravuje se</span>
     </div>
-    <div class="badges"><span class="badge b-dev">Připravuje se</span></div>
-    <p>Vyfotíš ručně psaný partiář a umělá inteligence (Claude) z něj přečte tahy. Každý tah se
-      ověří podle pravidel šachu, nejistá místa se ukážou ke kontrole a výsledkem je partie v PGN.
-      Zvládne českou i cizí notaci.</p>
-    <details>
-      <summary>Jak na to</summary>
-      <ol>
-        <li>Vlož vlastní klíč ke Claude API (získáš ho na platform.claude.com). Uloží se jen v tvém prohlížeči.</li>
-        <li>Vyfoť partiář nebo vyber fotku či PDF (nejvýš 4 strany).</li>
-        <li>Klikni na <strong>Přečíst partiář</strong>.</li>
-        <li>Zkontroluj zvýrazněné tahy a případně vyber správný.</li>
-        <li>Zkopíruj nebo stáhni PGN.</li>
-      </ol>
-      <p>Pozor: čtení je placené z tvého klíče, jeden partiář obvykle stojí 0,10 až 0,30 USD.</p>
-    </details>
-    <p class="note">Jde spíš o pokus. Ručně psané partiáře se čtou velmi špatně, takže je dost možné,
-      že aplikace nikdy nebude spolehlivě fungovat.</p>
+    <p>Umělá inteligence přečte tahy z fotky ručně psaného partiáře a ověří je podle pravidel.</p>
+    <p class="note">Spíš pokus. Ručně psané partiáře se čtou velmi špatně, takže možná nikdy nebude spolehlivě fungovat.</p>
     <div class="actions">
-      <a class="btn btn-main" aria-disabled="true" tabindex="-1">Brzy</a>
-      <a class="btn btn-sec" href="https://github.com/slivam24/Photo-to-PGN">Zdrojový kód</a>
+      <a class="btn" aria-disabled="true" tabindex="-1">Brzy</a>
+      <a href="https://github.com/slivam24/Photo-to-PGN">Zdrojový kód</a>
     </div>
   </article>
 
 </div>
 
-<section class="feedback">
-  <h2>Chyby, nápady, připomínky</h2>
-  <p>Každá zpětná vazba pomáhá. Nejlíp přes odkaz <strong>Nahlásit chybu</strong> u konkrétní aplikace
-    (je potřeba účet na GitHubu): napiš, co jsi dělal, co se stalo a co jsi čekal. Pomůže i snímek obrazovky.</p>
-  <p>Aplikace jsou zdarma a jejich zdrojový kód je veřejný na
-    <a href="https://github.com/slivam24">github.com/slivam24</a>.</p>
-</section>
-
 <footer>
-  Aplikace vznikají postupně ve volném čase a s pomocí umělé inteligence. Používáš je na vlastní odpovědnost.
+  <p>Chybu nebo nápad nahlas přes odkaz <strong>Nahlásit chybu</strong> u aplikace (je potřeba účet na GitHubu).</p>
+  <p>Zdrojový kód je veřejný na <a href="https://github.com/slivam24">github.com/slivam24</a>. Aplikace vznikají postupně ve volném čase s pomocí umělé inteligence.</p>
 </footer>
 
 </div>
